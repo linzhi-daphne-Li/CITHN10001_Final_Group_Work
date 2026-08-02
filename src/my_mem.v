@@ -1,4 +1,3 @@
-// MODULE START: my_mem
 module my_mem #(
     parameter WIDTH = 32,
     parameter MEM_DEPTH = 256
@@ -18,4 +17,3 @@ module my_mem #(
             RAM[a[31:2]] <= wd;
     end
 endmodule
-// MODULE END: my_mem

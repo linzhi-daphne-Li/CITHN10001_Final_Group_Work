@@ -1,4 +1,3 @@
-// MODULE START: adder
 module adder #(
     parameter WIDTH = 32
 )(
@@ -8,4 +7,3 @@ module adder #(
 );
     assign y = a + b;
 endmodule
-// MODULE END: adder

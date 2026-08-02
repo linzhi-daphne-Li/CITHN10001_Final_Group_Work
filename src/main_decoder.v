@@ -1,4 +1,3 @@
-// MODULE START: main_decoder
 module main_decoder(
     input  wire [6:0] op,
     output reg        we_rf,
@@ -95,4 +94,3 @@ module main_decoder(
         endcase
     end
 endmodule
-// MODULE END: main_decoder

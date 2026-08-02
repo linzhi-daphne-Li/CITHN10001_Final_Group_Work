@@ -1,4 +1,3 @@
-// MODULE START: hazard_unit
 module hazard_unit(
     input  wire [4:0] D_rs1,
     input  wire [4:0] D_rs2,
@@ -52,4 +51,3 @@ module hazard_unit(
             E_forward_alu_op2 = 2'b01;
     end
 endmodule
-// MODULE END: hazard_unit

@@ -1,4 +1,3 @@
-// MODULE START: pipe_reg
 module pipe_reg #(
     parameter WIDTH = 32
 )(
@@ -10,10 +9,9 @@ module pipe_reg #(
     output reg  [WIDTH-1:0] q
 );
     always @(posedge clk) begin
-        if (reset || clr)
+        if (!reset || clr)
             q <= {WIDTH{1'b0}};
         else if (en)
             q <= d;
     end
 endmodule
-// MODULE END: pipe_reg

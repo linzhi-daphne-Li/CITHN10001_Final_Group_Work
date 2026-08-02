@@ -1,4 +1,3 @@
-// MODULE START: sign_ext
 module sign_ext(
     input  wire [31:7] instr,
     input  wire [2:0]  imm_src,
@@ -21,4 +20,3 @@ module sign_ext(
         endcase
     end
 endmodule
-// MODULE END: sign_ext

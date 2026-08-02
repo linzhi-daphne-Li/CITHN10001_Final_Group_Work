@@ -1,4 +1,3 @@
-// MODULE START: mux3
 module mux3 #(
     parameter WIDTH = 32
 )(
@@ -17,4 +16,3 @@ module mux3 #(
         endcase
     end
 endmodule
-// MODULE END: mux3

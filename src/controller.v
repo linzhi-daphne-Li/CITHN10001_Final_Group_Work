@@ -1,4 +1,3 @@
-// MODULE START: controller
 module controller(
     input  wire [6:0] op,
     input  wire [2:0] funct3,
@@ -35,4 +34,3 @@ module controller(
         .alu_control(alu_control)
     );
 endmodule
-// MODULE END: controller

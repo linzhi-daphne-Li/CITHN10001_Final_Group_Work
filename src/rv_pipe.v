@@ -1,5 +1,5 @@
 module rv_pipe #(
-    parameter BRAM_ADDR_WIDTH = 8
+    parameter BRAM_ADDR_WIDTH = 32
 )(
     input  wire                         clk,
     input  wire                         reset,
@@ -129,12 +129,12 @@ module rv_pipe #(
 
     // Block Memory Generator uses synchronous read.  The address and its
     // matching PC are therefore delayed by one clock before entering IF/ID.
-    assign imem_en   = 1'b1;
-    assign imem_addr = F_PC[BRAM_ADDR_WIDTH+1:2];
+    assign imem_en   = reset;
+    assign imem_addr = F_PC;
     assign F_instr   = imem_rdata;
 
     always @(posedge clk) begin
-        if (reset) begin
+        if (!reset) begin
             F_req_PC     <= 32'b0;
             F_req_PC_P4  <= 32'b0;
             F_resp_valid <= 1'b0;
@@ -332,8 +332,8 @@ module rv_pipe #(
     );
 
     assign E_dm_wd  = E_forward_op2_y;
-    assign E_pc_src = (E_branch && E_zero) || E_jump;
-
+    assign E_pc_src = ((E_branch && E_zero) || E_jump) && ~pipeline_hold;
+    
     // PLR3: EX/MA
     pipe_reg #(1) PLR3_WE_RF(
         .clk(clk), .reset(reset), .en(~pipeline_hold), .clr(1'b0), .d(E_we_rf), .q(M_we_rf)
@@ -368,7 +368,7 @@ module rv_pipe #(
     // ============================================================
     assign dmem_en    = M_we_dm || M_is_load;
     assign dmem_we    = M_we_dm ? 4'b1111 : 4'b0000;
-    assign dmem_addr  = M_alu_o[BRAM_ADDR_WIDTH+1:2];
+    assign dmem_addr  = M_alu_o;
     assign dmem_wdata = M_dm_wd;
     assign M_dm_rd    = dmem_rdata;
 
@@ -377,7 +377,7 @@ module rv_pipe #(
     assign M_is_load = M_we_rf && (M_sel_result == 2'b01);
 
     always @(posedge clk) begin
-        if (reset)
+        if (!reset)
             M_load_wait <= 1'b0;
         else if (M_load_wait)
             M_load_wait <= 1'b0;

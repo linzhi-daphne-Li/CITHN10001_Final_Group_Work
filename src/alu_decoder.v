@@ -1,4 +1,3 @@
-// MODULE START: alu_decoder
 module alu_decoder(
     input  wire [1:0] alu_op,
     input  wire [2:0] funct3,
@@ -55,4 +54,3 @@ module alu_decoder(
         endcase
     end
 endmodule
-// MODULE END: alu_decoder

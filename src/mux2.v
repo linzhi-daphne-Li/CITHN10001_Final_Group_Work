@@ -1,4 +1,3 @@
-// MODULE START: mux2
 module mux2 #(
     parameter WIDTH = 32
 )(
@@ -9,4 +8,3 @@ module mux2 #(
 );
     assign y = sel ? d1 : d0;
 endmodule
-// MODULE END: mux2

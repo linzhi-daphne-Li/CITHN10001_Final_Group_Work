@@ -1,4 +1,3 @@
-// MODULE START: alu
 module alu(
     input  wire [31:0] a,
     input  wire [31:0] b,
@@ -35,4 +34,3 @@ module alu(
 
     assign zero = (alu_result == 32'b0);
 endmodule
-// MODULE END: alu

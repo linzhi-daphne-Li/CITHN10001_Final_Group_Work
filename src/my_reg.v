@@ -1,4 +1,3 @@
-// MODULE START: my_reg
 module my_reg #(
     parameter WIDTH = 32,
     parameter REG_NUM = 32
@@ -23,4 +22,3 @@ module my_reg #(
             RF[a3] <= wd;
     end
 endmodule
-// MODULE END: my_reg
