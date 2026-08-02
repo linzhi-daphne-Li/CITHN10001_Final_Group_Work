@@ -1,0 +1,311 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sun Aug  2 17:58:51 2026
+# Process ID: 40148
+# Current directory: E:/pack/project_cpu_2/project_final.runs/design_1_rv_pipe_1_0_synth_1
+# Command line: vivado.exe -log design_1_rv_pipe_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_rv_pipe_1_0.tcl
+# Log file: E:/pack/project_cpu_2/project_final.runs/design_1_rv_pipe_1_0_synth_1/design_1_rv_pipe_1_0.vds
+# Journal file: E:/pack/project_cpu_2/project_final.runs/design_1_rv_pipe_1_0_synth_1\vivado.jou
+# Running On: Jinjin, OS: Windows, CPU Frequency: 2395 MHz, CPU Physical cores: 32, Host memory: 16331 MB
+#-----------------------------------------------------------
+source design_1_rv_pipe_1_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/vivado_file/ip/ip_repo/rv_pipe_1'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/vivado_file/ip/ip_2'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2021.2/data/ip'.
+Command: synth_design -top design_1_rv_pipe_1_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20340
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1267.168 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_rv_pipe_1_0' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ip/design_1_rv_pipe_1_0/synth/design_1_rv_pipe_1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'rv_pipe' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/rv_pipe.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pc' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/pc.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pc' (1#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/pc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'adder' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/adder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'adder' (2#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/adder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/mux2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (3#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/mux2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pipe_reg' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/pipe_reg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pipe_reg' (4#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/pipe_reg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'controller' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'main_decoder' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/main_decoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'main_decoder' (5#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/main_decoder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu_decoder' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/alu_decoder.v:1]
+INFO: [Synth 8-226] default block is never used [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/alu_decoder.v:24]
+INFO: [Synth 8-226] default block is never used [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/alu_decoder.v:28]
+INFO: [Synth 8-226] default block is never used [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/alu_decoder.v:41]
+INFO: [Synth 8-6155] done synthesizing module 'alu_decoder' (6#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/alu_decoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'controller' (7#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'my_reg' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/my_reg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'my_reg' (8#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/my_reg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_ext' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/sign_ext.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sign_ext' (9#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/sign_ext.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pipe_reg__parameterized0' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/pipe_reg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pipe_reg__parameterized0' (9#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/pipe_reg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pipe_reg__parameterized1' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/pipe_reg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pipe_reg__parameterized1' (9#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/pipe_reg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pipe_reg__parameterized2' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/pipe_reg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pipe_reg__parameterized2' (9#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/pipe_reg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pipe_reg__parameterized3' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/pipe_reg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pipe_reg__parameterized3' (9#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/pipe_reg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux3' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/mux3.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux3' (10#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/mux3.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/alu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (11#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux4' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/mux4.v:1]
+INFO: [Synth 8-226] default block is never used [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/mux4.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'mux4' (12#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/mux4.v:1]
+INFO: [Synth 8-6157] synthesizing module 'hazard_unit' [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/hazard_unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hazard_unit' (13#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/hazard_unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'rv_pipe' (14#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ipshared/ef8f/src/rv_pipe.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rv_pipe_1_0' (15#1) [e:/pack/project_cpu_2/project_final.gen/sources_1/bd/design_1/ip/design_1_rv_pipe_1_0/synth/design_1_rv_pipe_1_0.v:57]
+WARNING: [Synth 8-7129] Port E_we_rf in module hazard_unit is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1267.168 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1267.168 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1267.168 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1267.168 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1294.422 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1294.422 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1294.422 ; gain = 27.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1294.422 ; gain = 27.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1294.422 ; gain = 27.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1294.422 ; gain = 27.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 3     
+	   3 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 17    
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 12    
++---RAMs : 
+	             1024 Bit	(32 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 5     
+	   4 Input   32 Bit        Muxes := 4     
+	   4 Input    4 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 2     
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   8 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 2     
+	   8 Input    1 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port E_we_rf in module hazard_unit is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1294.422 ; gain = 27.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++---------------------+---------------------+-----------+----------------------+--------------+
+|Module Name          | RTL Object          | Inference | Size (Depth x Width) | Primitives   | 
++---------------------+---------------------+-----------+----------------------+--------------+
+|design_1_rv_pipe_1_0 | inst/REGFILE/RF_reg | Implied   | 32 x 32              | RAM32M x 12  | 
++---------------------+---------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1294.422 ; gain = 27.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1294.422 ; gain = 27.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++---------------------+---------------------+-----------+----------------------+--------------+
+|Module Name          | RTL Object          | Inference | Size (Depth x Width) | Primitives   | 
++---------------------+---------------------+-----------+----------------------+--------------+
+|design_1_rv_pipe_1_0 | inst/REGFILE/RF_reg | Implied   | 32 x 32              | RAM32M x 12  | 
++---------------------+---------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1295.055 ; gain = 27.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1309.762 ; gain = 42.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1309.762 ; gain = 42.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1309.762 ; gain = 42.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1309.762 ; gain = 42.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1309.762 ; gain = 42.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1309.762 ; gain = 42.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    40|
+|2     |LUT1     |    65|
+|3     |LUT2     |   132|
+|4     |LUT3     |   106|
+|5     |LUT4     |    85|
+|6     |LUT5     |   149|
+|7     |LUT6     |   415|
+|8     |RAM32M   |    10|
+|9     |RAM32X1D |     4|
+|10    |FDRE     |   584|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1309.762 ; gain = 42.594
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 1309.762 ; gain = 15.340
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1309.762 ; gain = 42.594
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1316.504 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 54 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 14 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1330.059 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 14 instances were transformed.
+  RAM32M => RAM32M (inverted pins: WCLK) (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (inverted pins: WCLK) (RAMD32(x2)): 4 instances
+
+Synth Design complete, checksum: 9eac292e
+INFO: [Common 17-83] Releasing license: Synthesis
+60 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1330.059 ; gain = 62.891
+INFO: [Common 17-1381] The checkpoint 'E:/pack/project_cpu_2/project_final.runs/design_1_rv_pipe_1_0_synth_1/design_1_rv_pipe_1_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_rv_pipe_1_0, cache-ID = 362a68219b3fb1fc
+INFO: [Coretcl 2-1174] Renamed 37 cell refs.
+INFO: [Common 17-1381] The checkpoint 'E:/pack/project_cpu_2/project_final.runs/design_1_rv_pipe_1_0_synth_1/design_1_rv_pipe_1_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_rv_pipe_1_0_utilization_synth.rpt -pb design_1_rv_pipe_1_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Aug  2 17:59:54 2026...

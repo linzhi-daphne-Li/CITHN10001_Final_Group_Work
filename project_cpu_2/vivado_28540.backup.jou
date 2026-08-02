@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sun Aug  2 15:13:02 2026
+# Process ID: 28540
+# Current directory: E:/pack/project_final_3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21036 E:\pack\project_final_3\project_final.xpr
+# Log file: E:/pack/project_final_3/vivado.log
+# Journal file: E:/pack/project_final_3\vivado.jou
+# Running On: Jinjin, OS: Windows, CPU Frequency: 2395 MHz, CPU Physical cores: 32, Host memory: 16331 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/pack/project_final_3/project_final.xpr
+open_bd_design {E:/pack/project_final_3/project_final.srcs/sources_1/bd/design_1/design_1.bd}
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:rv_pipe:1.1 rv_pipe_0
+endgroup
+delete_bd_objs [get_bd_cells rv_pipe_0]
+set_property location {4 1387 -774} [get_bd_cells axi_gpio_0]
+set_property location {4 1389 -801} [get_bd_cells axi_gpio_0]
+set_property location {4 1375 -794} [get_bd_cells axi_gpio_0]
+set_property location {4 1386 -775} [get_bd_cells axi_gpio_0]
+set_property location {4 1355 -777} [get_bd_cells axi_gpio_0]
+get_property VLNV [get_bd_cells rv_pipe_0]
+open_bd_design {E:/pack/project_final_3/project_final.srcs/sources_1/bd/design_1/design_1.bd}
+puts "Current BD:"
+puts [current_bd_design]
+puts "RISC-V CPU cells:"
+set cpu_cells [get_bd_cells -hier -filter {VLNV =~ "*:rv_pipe:*"}]
+puts $cpu_cells
+foreach cpu $cpu_cells {
+    puts "$cpu -> [get_property VLNV $cpu]"
+}
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:rv_pipe:1.1 rv_pipe_0
+endgroup
+set_property location {5 1655 -1727} [get_bd_cells rv_pipe_0]
+delete_bd_objs [get_bd_cells rv_pipe_0]
+save_bd_design
+close_bd_design [get_bd_designs design_1]
+get_property ip_repo_paths [current_project]
+update_ip_catalog -rebuild

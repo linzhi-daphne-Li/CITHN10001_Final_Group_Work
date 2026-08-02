@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sun Aug  2 18:04:56 2026
+# Process ID: 31908
+# Current directory: E:/pack/project_cpu_2/project_final.runs/impl_1
+# Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: E:/pack/project_cpu_2/project_final.runs/impl_1/design_1_wrapper.vdi
+# Journal file: E:/pack/project_cpu_2/project_final.runs/impl_1\vivado.jou
+# Running On: Jinjin, OS: Windows, CPU Frequency: 2395 MHz, CPU Physical cores: 32, Host memory: 16331 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
