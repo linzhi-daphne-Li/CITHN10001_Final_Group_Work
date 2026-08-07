@@ -1,0 +1,61 @@
+00500093    # addi x1, x0, 5
+00A00113    # addi x2, x0, 10
+
+002081B3    # add  x3, x1, x2       -> 15
+00302023    # sw   x3, 0(x0)        -> offset 0x00
+
+40110233    # sub  x4, x2, x1       -> 5
+00402223    # sw   x4, 4(x0)        -> offset 0x04
+
+0020F2B3    # and  x5, x1, x2       -> 0
+00502423    # sw   x5, 8(x0)        -> offset 0x08
+
+0020E333    # or   x6, x1, x2       -> 15
+00602623    # sw   x6, 12(x0)       -> offset 0x0C
+
+0020C3B3    # xor  x7, x1, x2       -> 15
+00702823    # sw   x7, 16(x0)       -> offset 0x10
+
+00400413    # addi x8, x0, 4
+008114B3    # sll  x9, x2, x8       -> 10 << 4 = 160 = 0xA0
+00902A23    # sw   x9, 20(x0)       -> offset 0x14
+
+00100513    # addi x10, x0, 1
+00A155B3    # srl  x11, x2, x10     -> 10 >> 1 = 5
+00B02C23    # sw   x11, 24(x0)      -> offset 0x18
+
+FFF00613    # addi x12, x0, -1
+40A656B3    # sra  x13, x12, x10    -> -1 >> 1 = 0xFFFFFFFF
+00D02E23    # sw   x13, 28(x0)      -> offset 0x1C
+
+00162733    # slt  x14, x12, x1     -> (-1 < 5) = 1
+02E02023    # sw   x14, 32(x0)      -> offset 0x20
+
+001637B3    # sltu x15, x12, x1     -> unsigned(-1) < 5 = 0
+02F02223    # sw   x15, 36(x0)      -> offset 0x24
+
+00002803    # lw   x16, 0(x0)       -> load 15
+03002423    # sw   x16, 40(x0)      -> offset 0x28
+
+00002883    # lw   x17, 0(x0)       -> load 15
+00188913    # addi x18, x17, 1      -> immediate LW-use dependency = 16
+03202623    # sw   x18, 44(x0)      -> offset 0x2C
+
+00108463    # beq  x1, x1, +8       -> branch must be taken
+06300993    # addi x19, x0, 99      -> MUST be flushed/skipped
+00100993    # addi x19, x0, 1       -> branch success value
+
+00800AEF    # jal  x21, +8          -> x21 = PC+4 = 0x88
+06300B13    # addi x22, x0, 99      -> MUST be skipped by JAL
+
+02A02C23    # sw   x10, 56(x0)      -> offset 0x38, JAL jump = 1
+03502E23    # sw   x21, 60(x0)      -> offset 0x3C, return address = 0x88
+
+03302823    # sw   x19, 48(x0)      -> offset 0x30, BEQ success = 1
+
+12345A37    # lui  x20, 0x12345     -> 0x12345000
+03402A23    # sw   x20, 52(x0)      -> offset 0x34
+
+08A02023    # sw   x10, 128(x0)     -> offset 0x80, DONE = 1
+
+0000006F    # jal  x0, 0            -> final infinite loop
